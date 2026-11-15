@@ -1,0 +1,213 @@
+[gd_scene format=3 uid="uid://eevkko6fmy12"]
+
+[ext_resource type="Script" uid="uid://bkr3w53b0jaf8" path="res://data/network.gd" id="1_j3mm4"]
+[ext_resource type="Script" uid="uid://c3qo02aocms8w" path="res://data/sl.gd" id="2_3ndpk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1rbu"]
+size = Vector2(13.735462, 173.12814)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_51ux4"]
+size = Vector2(20, 22.952036)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_irxex"]
+size = Vector2(8.882416, 91.76581)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s4573"]
+size = Vector2(213.82346, 72.207214)
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_j3mm4"]
+properties/0/path = NodePath("network:ren")
+properties/0/spawn = true
+properties/0/replication_mode = 2
+properties/1/path = NodePath("network:p1x")
+properties/1/spawn = true
+properties/1/replication_mode = 2
+properties/2/path = NodePath("network:p2x")
+properties/2/spawn = true
+properties/2/replication_mode = 2
+properties/3/path = NodePath("network:ks")
+properties/3/spawn = true
+properties/3/replication_mode = 2
+
+[node name="1" type="Node2D" unique_id=1386430120]
+
+[node name="an" type="Control" parent="." unique_id=572915959]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 509.0
+offset_top = 223.0
+offset_right = 1060.0
+offset_bottom = 481.0
+
+[node name="jg" type="Label" parent="an" unique_id=1177179240]
+visible = false
+layout_mode = 0
+offset_left = -11.0
+offset_top = -89.0
+offset_right = 489.0
+offset_bottom = 156.0
+theme_override_font_sizes/font_size = 55
+text = "你输了"
+
+[node name="jm" type="TabContainer" parent="an" unique_id=203327755]
+layout_mode = 1
+anchors_preset = -1
+offset_left = -90.0
+offset_top = 11.0
+offset_right = 200.0
+offset_bottom = 145.0
+current_tab = 0
+tabs_visible = false
+
+[node name="cj" type="VBoxContainer" parent="an/jm" unique_id=1450783398]
+layout_mode = 2
+alignment = 1
+metadata/_tab_index = 0
+
+[node name="fwd" type="Button" parent="an/jm/cj" unique_id=359081118]
+layout_mode = 2
+text = "服务端"
+
+[node name="khd" type="Button" parent="an/jm/cj" unique_id=960048845]
+layout_mode = 2
+text = "客户端"
+
+[node name="jr" type="VBoxContainer" parent="an/jm" unique_id=66310910]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="ip" type="LineEdit" parent="an/jm/jr" unique_id=50736457]
+layout_mode = 2
+placeholder_text = "ip"
+
+[node name="dk" type="LineEdit" parent="an/jm/jr" unique_id=546208925]
+layout_mode = 2
+placeholder_text = "port：11451"
+
+[node name="jr" type="Button" parent="an/jm/jr" unique_id=1412432605]
+layout_mode = 2
+text = "加入"
+
+[node name="fh" type="Button" parent="an/jm/jr" unique_id=812287098]
+layout_mode = 2
+text = "返回"
+
+[node name="xd" type="TabContainer" parent="an" unique_id=838408871]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.048
+anchor_top = 0.12900001
+anchor_right = -0.048
+anchor_bottom = 0.12900001
+offset_left = -458.552
+offset_top = 244.718
+offset_right = -307.552
+offset_bottom = 345.718
+current_tab = 0
+tabs_visible = false
+
+[node name="sg" type="VBoxContainer" parent="an/xd" unique_id=2040117762]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="st" type="Button" parent="an/xd/sg" unique_id=1085912692]
+layout_mode = 2
+text = "石头"
+
+[node name="jd" type="Button" parent="an/xd/sg" unique_id=148083226]
+layout_mode = 2
+text = "剪刀"
+
+[node name="b" type="Button" parent="an/xd/sg" unique_id=479004896]
+layout_mode = 2
+text = "布"
+
+[node name="network" type="Node" parent="." unique_id=800850866]
+script = ExtResource("1_j3mm4")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1298360590]
+position = Vector2(575, 325)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1439807408]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=376487036]
+position = Vector2(-7.500002, 242.18422)
+rotation = -3.1415925
+scale = Vector2(1.5288894, 6.855321)
+shape = SubResource("RectangleShape2D_l1rbu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=613232262]
+position = Vector2(0, -18.5)
+scale = Vector2(124.558525, 1.7863339)
+shape = SubResource("RectangleShape2D_51ux4")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1734141025]
+position = Vector2(1171, 336.59775)
+scale = Vector2(4.0529523, 9.380449)
+shape = SubResource("RectangleShape2D_irxex")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=878574333]
+position = Vector2(602.50006, 743.47644)
+scale = Vector2(6.3795652, -2.6445112)
+shape = SubResource("RectangleShape2D_s4573")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=1812225011]
+replication_config = SubResource("SceneReplicationConfig_j3mm4")
+
+[node name="_ren" type="Label" parent="." unique_id=278065779]
+offset_left = 1107.0
+offset_top = 2.0
+offset_right = 1147.0
+offset_bottom = 61.0
+theme_override_font_sizes/font_size = 43
+text = "0"
+
+[node name="1x" type="Label" parent="." unique_id=984522331]
+visible = false
+offset_left = 200.0
+offset_top = 253.0
+offset_right = 240.0
+offset_bottom = 341.0
+theme_override_font_sizes/font_size = 64
+text = "0"
+
+[node name="2x" type="Label" parent="." unique_id=556241227]
+visible = false
+offset_left = 965.0
+offset_top = 269.0
+offset_right = 1005.0
+offset_bottom = 357.0
+theme_override_font_sizes/font_size = 64
+text = "0"
+
+[node name="sl" type="Label" parent="." unique_id=666725794]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "0%"
+script = ExtResource("2_3ndpk")
+
+[node name="_win" type="Label" parent="." unique_id=1409875158]
+visible = false
+offset_left = 39.0
+offset_top = 25.0
+offset_right = 79.0
+offset_bottom = 48.0
+text = "1"
+
+[node name="_chang" type="Label" parent="." unique_id=1404241113]
+visible = false
+offset_left = 82.0
+offset_top = 25.0
+offset_right = 122.0
+offset_bottom = 48.0
+text = "1"
+
+[connection signal="pressed" from="an/jm/cj/fwd" to="network" method="_on_fwd_pressed"]
+[connection signal="pressed" from="an/jm/cj/khd" to="network" method="_on_khd_pressed"]
+[connection signal="pressed" from="an/jm/jr/jr" to="network" method="_on_jr_pressed"]
+[connection signal="pressed" from="an/jm/jr/fh" to="network" method="_on_fh_pressed"]
+[connection signal="pressed" from="an/xd/sg/st" to="network" method="_on_st_pressed"]
+[connection signal="pressed" from="an/xd/sg/jd" to="network" method="_on_jd_pressed"]
+[connection signal="pressed" from="an/xd/sg/b" to="network" method="_on_b_pressed"]
