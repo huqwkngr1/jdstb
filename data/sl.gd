@@ -22,12 +22,12 @@ func _process(_delta: float) -> void:
 	_win.text = str(win)
 	_chang.text = str(chang)
 	
-	if(Input.is_key_pressed(KEY_P)):
-		$"../1x".visible = true
-		$"../2x".visible = true
-	else :
-		$"../1x".visible = false
-		$"../2x".visible = false
+	#if(Input.is_key_pressed(KEY_P)):
+		#$"../1x".visible = true
+		#$"../2x".visible = true
+	#else :
+		#$"../1x".visible = false
+		#$"../2x".visible = false
 
 
 func load_file():

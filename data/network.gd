@@ -100,6 +100,16 @@ func _physics_process(_delta: float) -> void:
 				$"../sl".chang += 1
 				$"../sl".win += 1
 				$"../sl".save_file()
+			elif (dj() == 0):
+				js = true
+				$"../an/jg".text = "平手哦"
+				$"../an/jg".visible = true
+				await get_tree().create_timer(1).timeout
+				$"../an/jg".visible = false
+				$"../an/xd".visible = true
+				p1xz.rpc(0)
+				p2xz.rpc(0)
+				$"../sl".save_file()
 			else :
 				js = true
 				$"../an/jg".text = "你鼠了"
